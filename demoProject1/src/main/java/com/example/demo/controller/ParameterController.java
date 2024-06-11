@@ -66,4 +66,47 @@ public class ParameterController {
 		
 		return "redirect:/param/main";
 	}
+	
+	/*
+	 2. @RequestParam - 낱개(한 개, 단 수)개 파라미터 얻어오기
+	 
+	 - request 객체를 이용한 파라미터 전달 어노테이션
+	 - 매개 변수 앞에 해당 어노테이션을 작성하면, 매개변수에 값이 작성된
+	 - 작성되는 데이터는 매개변수(파라미터) 타입에 맞게 형변환(parse) 자동으로 수행
+	 
+	 [속성 추가 작성법]
+	 @RequestParam(value="name", required="false", defaultVale="1")
+	 
+	 value = 전달받은 input 태그의 name 속성ㄱ밧
+	 
+	 required = 입력된 name 속성값 파라미터(매개변수) 필수 여부 지정(기본값 true)
+	 -> required = true 인 파라미터가 존재하지 않는다면 400 bad request 에러 발생
+	 -> required = true 인 파라미터가 null인 경우에도 400 bad request 에러 발생
+	 
+	 defaultValue = 파라미터 중 일치하는 name 속성 값이 없을 경우 대입할 값 지정
+	 -> required 가 false 일 경우 사용
+	*/
+	
+	//400 bad request (잘못된 요청)
+	// - 파라미터 불충분
+	@PostMapping("test2")
+	public String paramTest2(/*requestParam 여기에 보통 작성*/) {
+		log.info("문제없이 insert 가능한지 확인하기");
+		return "redirect:/param/main";
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 }
