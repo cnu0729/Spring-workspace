@@ -13,6 +13,12 @@
 <!-- mapper로 sql 작성이 어디서부터 어디까지인지 범위를 설정 
 	 namespace는 나중에 java 파일 중에서 어떤 파일로 db 작성 내용을 전달받고 전달할지 위치 파일 지정
 -->
+
+<!-- id 값을 insertMember 로 작성했다면
+	 java 파일에서 mapper service controller 모두 insertMember 로 통일
+	 통일을 안해도 되긴하지만 Spring Boot는 @(어노테이션)과 properties 에 작성한
+	 작성경로를 통해 임의적으로 이동하기 때문에 이름이 다를 경우에는 파일의 위치를 찾지 못하거나 실행이 안될 수 있음
+ -->
 <mapper namespace="com.example.mapper.MemberMapper">
 <!-- ID는 나중에 MEMBERMAPPER로 만든 INTERFACE에 전달할 명칭 
 	 parameterType은 dto 중에서 어떤 java 파일을 바라볼지 선택 -->
@@ -25,7 +31,5 @@ values (member_seq.NEXTVAL, #{memberName}, #{memberAge}, #{memberPhone})
 
 <!-- 마찬가지로 select update delete 작성해주면 됨 
 	 select 는 parameterType이 들어가는 것이 아니라 resultSet 사용해서 검색이나 조회한 결과를 자바에 전달
-	 
-
 -->
 </mapper>
