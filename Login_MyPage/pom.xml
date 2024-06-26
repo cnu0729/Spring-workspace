@@ -10,9 +10,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.khmall</groupId>
-	<artifactId>Login-Session</artifactId>
+	<artifactId>Login-Session-pre</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Login-Session</name>
+	<name>Login-Session-pre</name>
 	<description>select join Project</description>
 	<url />
 	<licenses>
@@ -76,7 +76,6 @@
 			<version>3.0.3</version>
 			<scope>test</scope>
 		</dependency>
-		
 
 	</dependencies>
 
