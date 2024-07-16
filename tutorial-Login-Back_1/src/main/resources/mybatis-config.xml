@@ -3,7 +3,6 @@
 <configuration>
 	<settings>
 		<setting name="jdbcTypeForNull" value="NULL" />
-		
 		<!-- todo_name underscore 표기법을 todoName camel 표기법 변경 -->
 		<setting name="mapUnderscoreToCamelCase" value="true" />
 	</settings>
